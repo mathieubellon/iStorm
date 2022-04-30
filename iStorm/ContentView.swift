@@ -15,18 +15,26 @@ struct ContentView: View {
                     Image(systemName: "house.circle.fill")
                     Text("Home")
                 }
-            EventsView().tabItem{
+            EventsView()
+                .tabItem{
                 Image(systemName: "list.dash")
                 Text("All Events")
             }
-            FavoritesView().tabItem{
+            FavoritesView()
+                .tabItem{
                 Image(systemName: "star.fill")
                 Text("My Fav")
             }
-            ProfileView().tabItem{
+            ProfileView()
+                .tabItem{
                 Image(systemName: "person.circle")
                 Text("My profile")
             }
+        }
+        .accentColor(Color.black)
+        .onAppear{
+            UITabBar.appearance().backgroundColor = .white
+            UITabBar.appearance().unselectedItemTintColor = .lightGray
         }
     }
 }
@@ -44,8 +52,9 @@ struct HomeView: View {
     
     var body: some View {
         VStack {
-            Color.red.ignoresSafeArea(edges: .top)
             Text("Home View")
+                   .font(.title)
+                   .foregroundColor(.blue)
             Spacer()
         }
     }
@@ -54,10 +63,12 @@ struct HomeView: View {
 struct EventsView: View {
     
     
+    
     var body: some View {
-        ZStack {
-            Color.blue.ignoresSafeArea(edges: .top)
-            Text("Events View")
+        VStack {
+
+             LsEventsList()
+
         }
     }
 }
