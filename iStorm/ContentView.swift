@@ -25,6 +25,11 @@ struct ContentView: View {
                 Image(systemName: "star.fill")
                 Text("My Fav")
             }
+            CalendarView()
+                .tabItem{
+                Image(systemName: "calendar")
+                Text("Meetings")
+            }
             ProfileView()
                 .tabItem{
                 Image(systemName: "person.circle")
@@ -59,6 +64,8 @@ struct HomeView: View {
         }
     }
 }
+
+
 
 struct EventsView: View {
     

@@ -17,6 +17,8 @@
 		08FFA7C4281DA67E00C459E5 /* LsEventRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFA7C3281DA67E00C459E5 /* LsEventRow.swift */; };
 		08FFA7C6281DAA9900C459E5 /* LsEventsList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFA7C5281DAA9900C459E5 /* LsEventsList.swift */; };
 		08FFA7C9281DC2FA00C459E5 /* LsEventDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFA7C8281DC2FA00C459E5 /* LsEventDetail.swift */; };
+		08FFA7CC281DDE7A00C459E5 /* CalendarKit in Frameworks */ = {isa = PBXBuildFile; productRef = 08FFA7CB281DDE7A00C459E5 /* CalendarKit */; };
+		08FFA7CE281DE0CB00C459E5 /* CalendarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08FFA7CD281DE0CB00C459E5 /* CalendarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +33,7 @@
 		08FFA7C3281DA67E00C459E5 /* LsEventRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LsEventRow.swift; sourceTree = "<group>"; };
 		08FFA7C5281DAA9900C459E5 /* LsEventsList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LsEventsList.swift; sourceTree = "<group>"; };
 		08FFA7C8281DC2FA00C459E5 /* LsEventDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LsEventDetail.swift; sourceTree = "<group>"; };
+		08FFA7CD281DE0CB00C459E5 /* CalendarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				08FFA7CC281DDE7A00C459E5 /* CalendarKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,11 +98,20 @@
 		08FFA7C7281DAB6800C459E5 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				08FFA7CF281DE0FC00C459E5 /* EventList */,
+				08FFA7CD281DE0CB00C459E5 /* CalendarView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		08FFA7CF281DE0FC00C459E5 /* EventList */ = {
+			isa = PBXGroup;
+			children = (
 				08FFA7C3281DA67E00C459E5 /* LsEventRow.swift */,
 				08FFA7C5281DAA9900C459E5 /* LsEventsList.swift */,
 				08FFA7C8281DC2FA00C459E5 /* LsEventDetail.swift */,
 			);
-			path = Views;
+			path = EventList;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -117,6 +130,9 @@
 			dependencies = (
 			);
 			name = iStorm;
+			packageProductDependencies = (
+				08FFA7CB281DDE7A00C459E5 /* CalendarKit */,
+			);
 			productName = iStorm;
 			productReference = 08FFA7AB281D957B00C459E5 /* iStorm.app */;
 			productType = "com.apple.product-type.application";
@@ -145,6 +161,9 @@
 				Base,
 			);
 			mainGroup = 08FFA7A2281D957B00C459E5;
+			packageReferences = (
+				08FFA7CA281DDE7900C459E5 /* XCRemoteSwiftPackageReference "CalendarKit" */,
+			);
 			productRefGroup = 08FFA7AC281D957B00C459E5 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -174,6 +193,7 @@
 			files = (
 				08FFA7BD281DA24E00C459E5 /* LsEvent.swift in Sources */,
 				08FFA7C1281DA46300C459E5 /* ModelData.swift in Sources */,
+				08FFA7CE281DE0CB00C459E5 /* CalendarView.swift in Sources */,
 				08FFA7C4281DA67E00C459E5 /* LsEventRow.swift in Sources */,
 				08FFA7B1281D957B00C459E5 /* ContentView.swift in Sources */,
 				08FFA7AF281D957B00C459E5 /* iStormApp.swift in Sources */,
@@ -379,6 +399,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		08FFA7CA281DDE7900C459E5 /* XCRemoteSwiftPackageReference "CalendarKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/richardtop/CalendarKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		08FFA7CB281DDE7A00C459E5 /* CalendarKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 08FFA7CA281DDE7900C459E5 /* XCRemoteSwiftPackageReference "CalendarKit" */;
+			productName = CalendarKit;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 08FFA7A3281D957B00C459E5 /* Project object */;
 }
